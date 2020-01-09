@@ -1,0 +1,116 @@
+0.5.0 - Released with KDE 4.3.0
+------------------------------------------------------------------------
+- Updated to LibRaw 0.7.2 : More accurate types conversion in libraw_datastream.h to make compilers happy.
+                            New postprocessing parameter auto_bright_thr: set portion of clipped pixels for 
+                            auto brightening code (instead of dcraw-derived hardcoded 1%).
+                            -U option for dcraw_emu sample sets auto_bright_thr parameter.
+- Updated to LibRaw 0.7.1 : Fixed broken OpenMP support.
+- Updated to LibRaw 0.7.0 : Black (masked) pixels data extracted from RAW and avaliable in application.
+                            Application can turn off RAW data filtering (black level subtraction, 
+                            zero pixels removal and raw tone curve).
+                            New 'input framework' released. Reading raw data from file and memory buffer supported from scratch. 
+                            LibRaw-using application can implement own data reading functions (e.g. reading from network stream).
+                            Fuji SuperCCD: raw data extracted without 45-degree rotation.
+                            New sample applications: 4channels and unprocessed_raw
+                            Imported (subsequentally) new dcraw versions from 8.89 to 8.93 (up to date) 
+- New option to switch on/off auto brightness adjsutements.
+- Add support of Leica Raw files (RWL).
+- New method to see if Libraw use OpenMP shared library to perform parallel demosaicing.
+- OpenMP support auto detection based on FindOpenMP Cmake script.
+
+0.4.0 - Released with KDE 4.2.0
+------------------------------------------------------------------------
+- Updated to LibRaw 0.6.5 : Fixed file descriptor and buffer memory leak when thumbnail extractor is called, 
+                            but library object is not properly initialized.
+                            Fixes in Imacon files unpacking.
+                            Fixes in Hasselblad .fff files unpacking.
+- Updated to LibRaw 0.6.3 : NEF processing code changed (some overflow control added).
+- Updated to LibRaw 0.6.2.
+- New cameras: Canon G10 & 5D Mk2, Leaf AFi 7, Leica D-LUX4,              
+               Panasonic FX150 & G 1, Fujifilm IS Pro.
+- Updated to LibRaw 0.6.1.
+- New cameras: Canon 50D, Sony A900, Nikon D90 & P6000, Panasonic LX3 FZ28.
+- Ported to LibRaw Api 0.6.0. Removed dcraw.c and DcrawBinary class.
+- Use kDebug(51002) instead qDebug().
+
+0.3.0 - Released with KDE 4.1.2
+------------------------------------------------------------------------
+- Sync with KDE3 branch 0.1.5 API changes.
+
+0.2.0 - Released with KDE 4.1.0
+------------------------------------------------------------------------
+- Port to CMake/KDE4/QT4
+- Moved from extragear/libs to kdegraphics/libs
+
+0.1.5
+------------------------------------------------------------------------
+
+- API changed: add white point settings support (dcraw -S option)
+
+- Updated dcraw to 8.86
+  New camera : Sony A300.
+  Fixed camera WB on the A200.
+  Set model-specific saturation levels in adobe_coeff().
+  No new options introduced.
+- Updated dcraw to 8.85
+  New camera : Olympus E-420.
+  No new options introduced.
+- Updated dcraw to 8.84
+  New cameras: Canon EOS 450D, Nikon D60, and Fuji S100FS.
+  Copied new matrices from Adobe DNG Converter 4.4.
+  sRAW support in 1.393 broke Fuji DNG files, now fixed.
+  No new options introduced.
+
+0.1.4
+------------------------------------------------------------------------
+- updated dcraw to 8.83
+  new cameras: Apple QuickTake 200, Fuji IS-1, Sony DSLR-A350, Pentax K20D,
+               Nokia N95, Canon PowerShots A460, Canon PowerShots A530,
+               Canon PowerShots A650.
+               no new options introduced.
+- updated dcraw to 8.82
+               new cameras: Sony DSLR-A200, Sony DSLR-A700, Sony XCD-SX910CR, STV680 VGA
+               no new options introduced.
+                                      
+Bugs fixed from B.K.O (http://bugs.kde.org):
+001 ==> 142055 : Which whitebalance is used.
+
+0.1.3
+------------------------------------------------------------------------
+- updated dcraw to 8.81
+- New cameras: Canon G7, Fuji FinePix S9100/S9600, Olympus SP560UZ, Panasonic DMC-L10
+
+- updated dcraw to 8.80
+- new cameras: Hasselblad H3D, Olympus E-3, Canon EOS 40D, Canon PowerShot G9,
+               Canon EOS-1Ds Mark III, AVT F-080C, Nikon D3, Nikon D300,
+               Nikon Coolpix S6, Panasonic DMC-FZ18, Sony DSLR-A700
+
+               -m number_of_passes
+               After interpolation, clean up color artifacts by repeatedly 
+               applying a 3x3 median filter to the R-G and B-G channels.
+- dcraw.c licence : is GPL compatible again == less wories)
+
+0.1.2
+------------------------------------------------------------------------
+
+New features
+- updated internal dcraw from 8.60 to 8.77. API changed.
+- add new chromatic aberration reduction options (patch from Guillaume Castagnino).
+
+0.1.1
+------------------------------------------------------------------------
+
+New features
+- API changed: * KDcraw destructor is now virtual.
+               * Added DcrawSettingsContainer destructor.
+               * Separate embedded JPEG preview extraction and half decoding methods
+                 to get a preview of RAW pictures.
+
+Bugs fixed from B.K.O (http://bugs.kde.org):
+001 ==> 145482 : libkdraw compile fails on Cygwin.
+
+0.1.0
+------------------------------------------------------------------------
+First implementation
+
+For details and info about previous versions, see ChangeLog.

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM "http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+<kcfg>
+  <kcfgfile name="krulerrc"/>
+  <include>KGlobalSettings</include>
+  <group name="StoredSettings">
+    <entry name="BgColor" type="Color">
+      <label>Background color of the ruler.</label>
+      <default code="true">QColor(255, 200, 80)</default>
+    </entry>
+    <entry name="Length" type="Int">
+      <label>Length of the ruler.</label>
+      <default>600</default>
+    </entry>
+    <entry name="ScaleFont" type="Font">
+      <label>Font of the text on the ruler scale.</label>
+      <default code="true">QFont( KGlobalSettings::generalFont().family(), 6 )</default>
+    </entry>
+    <entry name="Orientation" type="Int">
+      <label>Orientation of the ruler</label>
+      <default>2</default>
+    </entry>
+    <entry name="LeftToRight" type="Bool">
+      <label>Direction of the ruler</label>
+      <default>true</default>
+    </entry>
+    <entry name="Offset" type="Int">
+      <label>Offset of the origin</label>
+      <default>0</default>
+    </entry>
+    <entry name="RelativeScale" type="Bool">
+      <label>Is the scale of the ruler relative (percentage)</label>
+      <default>false</default>
+    </entry>
+    <entry name="TrayIcon" type="Bool">
+      <label>Is a tray icon used</label>
+      <default>false</default>
+    </entry>
+    <entry name="Opacity" type="Int">
+      <label>Opacity of the window</label>
+      <default>255</default>
+    </entry>
+    <entry name="RotateButtonsVisible" type="Bool">
+      <label>Are the rotate buttons visible</label>
+      <default>false</default>
+    </entry>
+    <entry name="CloseButtonVisible" type="Bool">
+      <label>Is the close button visible</label>
+      <default>false</default>
+    </entry>
+    <entry name="NativeMoving" type="Bool">
+      <label>Is native moving (possibly wobbling windows) active</label>
+      <default>false</default>
+    </entry>
+  </group>
+</kcfg>

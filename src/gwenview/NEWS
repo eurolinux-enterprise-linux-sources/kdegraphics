@@ -1,0 +1,57 @@
+# 2.3.2
+## Fixes
+- Ensure crop widget is always visible (bug #201098).
+- Ensure operations always apply to the current url (bug #185769).
+- Make sure setting the crop ratio does not resize the crop rect to 0x0
+  (bug #199946).
+- Correctly enable or disable next and previous buttons when starting Gwenview
+  with an image as parameter (bug #205468).
+- Do not crash if started with a comma as parameter (bug #197563).
+
+# 2.3.1
+## Fixes
+- Ensure "Advanced Slideshow" plugin is always enabled.
+- When trying to quit Gwenview with unsaved changes, really quit when all
+  images have been saved.
+
+# 2.3.0
+## New features
+- Gwenview can now play videos (bug #174522).
+- The sidebar has been reworked and now features a folder view.
+
+## Improvements
+- New crop interface: less intrusive and with the ability to crop to screen
+  ratio.
+- The thumbnail bar can now be shown vertically and show multiple rows/columns.
+- Gwenview now remembers visited urls.
+- History can now be disabled.
+- Added file operations and "open with" menu to image view context menu. Patch
+  by Marian Kyral (bug #187819).
+- Show XMP image information.
+- Show compressed SVG files.
+
+## Fixes
+- Restart slideshow timer when user changes current image (bug #186411).
+- Scroll when dragging files to the top or bottom of the thumbnail view (bug
+  #189510).
+- Correctly refresh view when reloading an SVG document (bug #189525).
+- Fix crash when saving multiple modified images with "Save All" (bug #189992).
+- Do not crash when clicking a rotate button from the thumbnail view speedbar.
+- Disable screensaver in fullscreen mode (bug #185916).
+- Forget modified documents if they are deleted or trashed.
+- Fix date sorting.
+
+# 2.2.3
+## Fixes
+- Handle gif files containing one frame and a graphic control extension as
+  non-animated gif (bug #185523).
+
+# 2.2.2
+## Fixes
+- Fix display of JPEG2000 images.
+- Fix memory leak when rotating images.
+- Fix crash when switching to parent directory when in View mode (bug #186187).
+- Fix crop rect (bug #184876).
+
+## Improvements
+- Give back memory as soon as modified images have been saved.

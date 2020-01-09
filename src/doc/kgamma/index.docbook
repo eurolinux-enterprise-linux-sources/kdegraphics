@@ -1,0 +1,219 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
+ "dtd/kdex.dtd" [
+  <!ENTITY kgamma '<application>KGamma</application>'>
+  <!ENTITY kappname "&kgamma;">
+  <!ENTITY package "kdegraphics">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"><!-- change language only here -->
+]>
+
+<!-- ................................................................ -->
+
+<!-- The language must NOT be changed here. -->
+<book lang="&language;">
+<title>The &kgamma; Handbook</title>
+
+<bookinfo>
+<authorgroup>
+<author>
+<firstname>Michael</firstname>
+<surname>v.Ostheim</surname>
+<affiliation>
+<address><email>ostheimm@users.berlios.de</email></address>
+</affiliation>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<copyright>
+<year>2001, 2002, 2003</year>
+<holder>Michael v.Ostheim</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+
+<legalnotice>&FDLNotice;</legalnotice>
+<date>2008-08-26</date>
+<releaseinfo>4.1.1</releaseinfo>
+
+<!-- Abstract about this handbook -->
+<abstract>
+<para>&kgamma; is a simple tool for monitor gamma correction.</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KGamma</keyword>
+<keyword>Monitor</keyword>
+<keyword>Calibration</keyword>
+<keyword>Gamma</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>This document describes &kgamma; for &kde; 4.1.1</para>
+<para>&kgamma; is a tool for monitor gamma correction.  With proper gamma
+settings, your display (websites, images, &etc;) will look the same on your
+monitor as on other monitors.</para>
+<para>&kgamma; allows you to alter the monitor's gamma correction of the
+&X-Server;. But that's not all to do. For good results you have to set the
+correct brightness, contrast and color balance of your monitor. This
+may be difficult and you have to repeat every step several times.
+For perfect results you need really good (and expensive) hardware.</para>
+<para>This are system settings, please do not use &kgamma; to manipulate your
+image files.</para>
+</chapter>
+
+<chapter id="using-kgamma">
+<title>Using &kgamma;</title>
+<sect1 id="Setting-Gamma">
+<title>Setting Gamma Correction</title>
+<para>Use the four sliders to define the gamma correction either as a single
+value, or separately for the red, green and blue components. The &X-Server;
+default setting for gamma is 1.00 (&Mac; 1.80, WinXX 2.20). The test images help
+you to find proper settings.</para>
+<para>To store the gamma settings system wide, enable the option <guilabel>Save
+settings system wide</guilabel>. The system settings will be restored at next &X-Server;
+startup. You need root access to use this option. Use this if you want to
+correct the gamma settings for all users and graphical environments on this
+machine.</para>
+<para>To store the gamma settings to your personal &kde; configuration, do not
+enable that option. The user settings will be restored at next &kde; startup and
+replace temporary the system gamma settings. The system settings are not removed by
+that and will be restored at next &X-Server; startup.</para>
+<para>On multi head systems, select the screen you want to alter with the combo
+box. This will also work with xinerama enabled. If you want to set all screens
+to the same gamma values, enable the <guilabel>Sync screens</guilabel> option. On systems with only
+one screen this option will take no effect.</para>
+</sect1>
+
+<sect1 id="Gray-Scale">
+<title>Gray Scale Test Image</title>
+<para>You should be able to see the following:</para>
+
+<itemizedlist>
+<listitem>
+<para>A grayscale with 20 different sections</para>
+</listitem>
+<listitem>
+<para>The darkest section pure black</para>
+</listitem>
+<listitem>
+<para>The lightest section pure white</para>
+</listitem>
+<listitem>
+<para>No hint of any color in the gray tones</para>
+</listitem>
+</itemizedlist>
+
+<para>If you cannot see all of the 20 sections, use your monitors contrast settings
+or the <guilabel>Gamma</guilabel> slider of &kgamma; to correct this. If black is not pure black,
+try to darken the monitor, if white is not pure white, try to lighten
+it. If you see any colors in the gray tones alter the color balance settings of
+your monitor or the <guilabel>Red</guilabel>, <guilabel>Green</guilabel> and <guilabel>Blue</guilabel> slider of &kgamma;.</para>
+</sect1>
+
+<sect1 id="RGB-Scale">
+<title>RGB Scale Test Image</title>
+<para>
+You should be able to see three strips, each with 16 sections of red,
+green or blue tones. The darkest sections should be pure black, the brightest
+should be pure red, green or blue. If you don't see all sections of
+a color strip, try to lighten or darken this color.</para>
+</sect1>
+
+<sect1 id="CMY-Scale">
+<title>CMY Scale Test Image</title>
+<para>
+You should be able to see three strips, each with 11 sections of cyan,
+magenta or yellow tones. The brightest sections should be pure white, the darkest
+should be pure cyan, magenta or yellow.</para>
+
+<itemizedlist>
+<listitem>
+<para>If you cannot see all cyan sections, try to lighten or darken red</para>
+</listitem>
+<listitem>
+<para>If you cannot see all magenta sections, try to lighten or darken green</para>
+</listitem>
+<listitem>
+<para>If you cannot see all yellow sections, try to lighten or darken blue</para>
+</listitem>
+</itemizedlist>
+</sect1>
+
+<sect1 id="advanced">
+<title>Advanced Test Images</title>
+<para>
+The following three pictures shows you the abilities of your monitor at
+three points of the gray spectrum. If you cannot see all of the details,
+don't be worry, or buy better hardware.
+</para>
+<sect2 id="dark-gray">
+<title>Dark Gray Test Image</title>
+<para>
+You should be able to see 10 different rectangles of dark gray within a
+black box. The chart shows you 1% steps from black.
+</para>
+</sect2>
+<sect2 id="mid-gray">
+<title>Mid Gray Test Image</title>
+<para>
+This picture shows you 11 gray rectangles within a 50% gray box. You should be
+able to see all of the rectangles except the middle one. The rectangles represent
+the steps from 45% to 55% gray.
+</para>
+</sect2>
+<sect2 id="light-gray">
+<title>Light Gray Test Image</title>
+<para>
+You should be able to see 10 different rectangles of light gray within a white box.
+The chart shows you 1% steps from white.
+</para>
+</sect2>
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title>Credits and License</title>
+
+<para>
+&kgamma;
+</para>
+<para>
+Program copyright 2001, 2002, 2003 Michael v.Ostheim <email>ostheimm@users.berlios.de</email>
+</para>
+
+<para>
+Documentation copyright 2001, 2002, 2003 Michael v.Ostheim <email>ostheimm@users.berlios.de</email>
+</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+&underFDL;           <!-- FDL: do not remove. -->
+&underGPL;        	 <!-- GPL License -->
+</chapter>
+
+<appendix id="installation">
+<title>Installation</title>
+
+&install.intro.documentation;
+
+&install.compile.documentation;
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

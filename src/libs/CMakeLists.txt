@@ -1,0 +1,7 @@
+add_subdirectory(libkipi)
+add_subdirectory(libkdcraw)
+add_subdirectory(libkexiv2)
+if (SANE_FOUND)
+   add_subdirectory(libksane)
+endif (SANE_FOUND)
+add_subdirectory(mobipocket)

@@ -1,0 +1,12 @@
+TODO
+* move tray icon to another page in configuration dialog
+* move some actions to tray icon context menu
+
+DONE
+* Center scale
+* Define scale offset
+* Define offset via mouse wheel event
+* Store last orientation and scale direction
+* Store scale offset
+* Relative scale (percent). Then ignoring offset?
+* close button (visible on hover) on the lineal

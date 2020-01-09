@@ -1,0 +1,8 @@
+ClassName=Settings
+Namespace=Okular
+File=okular.kcfg
+Mutators=true
+Singleton=true
+Visibility=OKULAR_EXPORT
+IncludeFiles=core/okular_export.h
+MemberVariables=dpointer

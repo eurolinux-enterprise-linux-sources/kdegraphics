@@ -1,0 +1,87 @@
+<ui version="4.0" >
+ <class>RedEyeReductionHud</class>
+ <widget class="QWidget" name="RedEyeReductionHud" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>253</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" >
+   <item>
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>Size</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="diameterSlider" >
+     <property name="minimum" >
+      <number>2</number>
+     </property>
+     <property name="maximum" >
+      <number>40</number>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="diameterSpinBox" >
+     <property name="minimum" >
+      <number>2</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="applyButton" >
+     <property name="text" >
+      <string>Apply</string>
+     </property>
+     <property name="autoRaise" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>diameterSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>diameterSpinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>120</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>175</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>diameterSpinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>diameterSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>153</x>
+     <y>7</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>124</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
