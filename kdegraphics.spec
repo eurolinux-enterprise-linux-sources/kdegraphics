@@ -2,7 +2,7 @@ Name:    kdegraphics
 Summary: KDE Graphics Applications
 Epoch:   7
 Version: 4.10.5
-Release: 2%{?dist}
+Release: 3%{?dist}
 
 Group:   Applications/Multimedia
 License: GPLv2
@@ -84,6 +84,9 @@ Requires: okular-devel
 
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 7:4.10.5-3
+- Mass rebuild 2013-12-27
+
 * Fri Jul 05 2013 Than Ngo <than@redhat.com> - 7:4.10.5-2
 - cleanup
 
